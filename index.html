@@ -80,12 +80,45 @@
                 margin-left: 45%;
             }
         }
+
+        .imagem-rotacionavel {
+            transform: rotate(0deg);
+            transition: transform 0.5s ease;
+        }
+
+        @media (max-width: 760px) {
+            .imagem-rotacionavel {
+                transform-origin: top left;
+                transform: rotate(90deg) translateY(5%);
+                display: none;
+            }
+        }
     </style>
 </head>
 
 <body>
     <!-- Toolbar -->
     <header>
+        <div class="col-md-12 menuSuperior">
+            <div class="col-md-2">
+                <a href="">
+                    <i class="fas fa-list"></i>
+                    <b>Créditos</b>
+                </a>
+            </div>
+            <div class="col-md-2">
+                <a href="">
+                    <i class="fas fa-file-alt"></i>
+                    <b>Referências</b>
+                </a>
+            </div>
+            <div class="col-md-2">
+                <a href="">
+                    <i class="fas fa-user"></i>
+                    <b>Sobre o autor</b>
+                </a>
+            </div>
+        </div>
         <img src="assets/images/home/imgCapa.png" class="img-fluid" alt="Capa do curso">
     </header>
 
@@ -135,10 +168,12 @@
                         informações detalhadas de cada módulo!</b></p>
             </div>
 
+            <h1></h1>
+
             <div class="row">
                 <div class="col-md-4" style="display: flex; justify-content: flex-end; align-items: flex-start;">
-                    <img src="assets/images/home/gotas.png" class="imagem img-fluid" alt="gotas"
-                        style="max-width: 36%;">
+                    <img src="assets/images/home/gotas.png" class="img-fluid imagem-rotacionavel" alt="gotas"
+                        style="max-width: 26%;">
                 </div>
                 <div class="col-md-8">
                     <span style="text-transform: uppercase;"><b>Módulo 1<br>
@@ -187,7 +222,7 @@
                 </div>
             </div>
             <!-- Botão Conheça o Curso -->
-            <div class="row botao">
+            <div class="row botao" style="padding-top: 65px;">
                 <a href="modulo1/modulo1-aula1.html" class="btn btn-sm" id="botaoComecar" role="button" alt="Começar">
                     <strong>Começar</strong>
                 </a>
