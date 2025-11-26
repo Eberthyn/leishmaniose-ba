@@ -88,7 +88,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #984E35;
+  background-color: #984e35;
   color: white;
 
   h2 {
@@ -162,10 +162,10 @@ footer {
 }
 
 #botaoComecar {
-    background-color: #263A60;
-    color: white;
-    padding: 8px;
-    min-width: 200px;
+  background-color: #263a60;
+  color: white;
+  padding: 8px;
+  min-width: 200px;
 }
 
 .botaoExtras {
@@ -181,7 +181,7 @@ footer {
 }
 
 #botaoAvancar {
-  background-color: #263A60;
+  background-color: #263a60;
   color: white;
   width: 260px;
   height: 40px;
@@ -199,8 +199,8 @@ footer {
 #botaoVoltar {
   background-color: white;
   /* border-radius: 25px; */
-  border: 1px solid #263A60;
-  color: #263A60;
+  border: 1px solid #263a60;
+  color: #263a60;
   width: 260px;
   height: 40px;
   display: flex;
@@ -218,7 +218,7 @@ footer {
 }
 
 .botaoAvaliacao {
-  background-color: #C04CAF;
+  background-color: #c04caf;
 }
 
 .botaoMatricula {
@@ -243,7 +243,8 @@ footer {
 
 .tituloAula {
   h3 {
-    margin: 0;
+    margin-bottom: 0;
+    color: #984e35;
   }
 
   h1 {
@@ -269,6 +270,10 @@ footer {
 .conteudo {
   padding: 0% 12% 0% 10% !important;
   margin: 0% !important;
+
+  ul li.icon.arrow::before {
+    color: #0a665c;
+  }
 }
 
 .row {
@@ -301,19 +306,28 @@ footer {
 }
 
 .blocoTexto {
-  margin-left: 10% !important;
+  margin: 40px 0 40px 10% !important;
   padding: 30px 0 0 30px;
-  background-color: #F3E9DD;
+  background-color: #f3e9dd;
   color: black;
+}
+
+.objetivos {
+  padding: 30px;
+  background-color: #f3e9dd;
+
+  ul li.icon.arrow::before {
+    color: #984e35;
+  }
 }
 
 .conclusao {
   padding: 30px 0 0 30px;
-  background-color: #F3E9DD;
+  background-color: #f3e9dd;
   color: black;
 
   & h2 {
-    color: #984E35;
+    color: #984e35;
   }
 }
 
@@ -323,11 +337,15 @@ footer {
   margin-top: 40px !important;
   margin-left: 0px !important;
   padding: 24px 12px;
-  border: 4px dotted #984E35;
+  border: 4px dotted #984e35;
   font-family: "Prelo Book", sans-serif;
 
+  ul li.icon.arrow::before {
+    color: #984e35;
+  }
+
   b {
-    color: #984E35 !important;
+    color: #984e35 !important;
   }
 
   img {
@@ -344,8 +362,8 @@ footer {
   margin-top: 40px !important;
   margin-left: 0px !important;
   padding: 24px 12px;
-  border: 4px dotted #0A665C;
-  color: #0A665C !important;
+  border: 4px dotted #0a665c;
+  color: #0a665c !important;
   text-align: center;
   font-family: "Prelo Bold", sans-serif;
 
@@ -418,17 +436,17 @@ h2 {
 
 .conteudo {
   h2 {
-    color: #0A665C;
+    color: #0a665c;
   }
 
   h1 {
-    color: #984E35;
+    color: #984e35;
   }
 }
 
 h3 {
   font-size: 18px;
-  color: #984E35;
+  color: #263a60;
   font-weight: bold;
   font-family: "Prelo Bold";
   margin-bottom: 30px;
@@ -480,7 +498,7 @@ p.tituloLista {
   }
 
   h3 {
-    color: #984E35 !important;
+    color: #984e35 !important;
     margin: 10px 0;
   }
 }
@@ -623,7 +641,7 @@ ol li::marker {
   content: "\f061";
   font-weight: 900;
   margin-right: 15px;
-  color: #984E35;
+  color: #984e35;
 }
 
 .icon.checkmark::before {
@@ -766,7 +784,7 @@ footer {
 .menuSuperior {
   display: flex;
   justify-content: flex-end;
-  background-color: #263A60;
+  background-color: #263a60;
   min-height: 50px;
 
   a {
@@ -779,7 +797,6 @@ footer {
     align-items: center;
     max-width: 160px;
   }
-
 }
 
 footer img {
@@ -842,7 +859,7 @@ footer img {
 }
 
 .fundoTexto {
-  background-color: #984E35;
+  background-color: #984e35;
   padding-bottom: 50px !important;
   color: white !important;
 
@@ -876,7 +893,7 @@ footer img {
 }
 
 .card-header p {
-  color: #984E35;
+  color: #984e35;
   margin: auto;
   display: flex;
   justify-content: space-between;
@@ -886,6 +903,10 @@ footer img {
 .accordion {
   padding: 1rem 3rem;
   margin-bottom: 30px;
+
+  ul li.icon.arrow::before {
+    color: #984e35;
+  }
 }
 
 .card-body ul li {
@@ -1007,7 +1028,7 @@ footer img {
 }
 
 nav#menuLateral {
-  background-color: #263A60;
+  background-color: #263a60;
   color: white;
   padding-top: 32px;
   /* padding-left: 32px; */
@@ -1127,7 +1148,7 @@ a.tituloItem {
 #sidebarButton {
   position: fixed;
   color: white;
-  background-color: #263A60;
+  background-color: #263a60;
   border-radius: 0 0 5px 0;
   padding: 0px !important;
   margin-left: 16.667%;
@@ -1153,7 +1174,7 @@ a.tituloItem {
 #sidebarButton2 {
   position: fixed;
   color: white;
-  background-color: #263A60;
+  background-color: #263a60;
   border-radius: 0 0 5px 0;
   padding: 0% !important;
   margin-left: 30%;
@@ -1324,6 +1345,10 @@ input[type="radio"].input-certo:checked::before {
   justify-content: center;
   margin-bottom: 50px;
   margin-top: 20px;
+
+    ul li.icon.arrow::before {
+    color: #984e35;
+  }
 }
 
 .carousel-item {
@@ -1336,7 +1361,7 @@ input[type="radio"].input-certo:checked::before {
   border-radius: 8px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
   /* border: 0px solid #707070; */
-  padding: 20px 10px 0 10px !important;
+  padding: 30px 20px 30px 20px !important;
   flex-grow: 1;
   hyphens: auto;
 }
@@ -1405,7 +1430,7 @@ input[type="radio"].input-certo:checked::before {
   overflow: auto;
 }
 
-.tabela th {
+/* .tabela th {
   background-color: #aa1c95;
   color: white;
   text-align: center;
@@ -1422,7 +1447,7 @@ input[type="radio"].input-certo:checked::before {
 .tabela td,
 .tabela tr {
   border: 1px solid #707070;
-}
+} */
 
 .modal-content {
   padding: 1rem 3rem;
@@ -2139,4 +2164,50 @@ input[type="radio"].input-certo:checked::before {
 
 .modal.show .modal-content {
   opacity: 1;
+}
+
+table {
+  /* margin: 40px 0 !important; */
+  border-collapse: collapse;
+  width: 100%;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+th {
+  text-align: center !important;
+}
+
+th,
+td {
+  border: 1px solid #ccc;
+  padding: 15px;
+  text-align: left;
+  vertical-align: top;
+}
+
+/* Estilo do Cabeçalho */
+th {
+  background-color: #9c4332;
+  /* Tom marrom avermelhado */
+  color: white;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+/* Estilo da primeira coluna (Títulos) */
+td:first-child {
+  font-weight: bold;
+  background-color: inherit;
+  width: 30%;
+}
+
+/* Linhas pares com cor bege para efeito zebrado */
+tbody tr:nth-child(even) {
+  background-color: #f2e8dc;
+}
+
+/* Linhas ímpares brancas */
+tbody tr:nth-child(odd) {
+  background-color: #ffffff;
 }
