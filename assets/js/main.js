@@ -18,29 +18,80 @@ $(document).ready(function () {
 });
 
 /* Fixa onScroll */
-$(window).scroll(function teste() {
-  if (document.body.scrollHeight > window.innerHeight) {
-    $("#rodape").removeClass("fixaRodape");
-    $("#row-main").css("padding-bottom", "0%");
-  } else {
-    $("#rodape").addClass("fixaRodape");
-    $("#row-main").css("padding-bottom", ($('#rodape').css("height")));
-  }
+$(document).ready(function() {
+    
+    // 1. Criamos a função que calcula tudo
+    function ajustarLayout() {
+        var $header = $('header');
+        var $menu = $("#menuLateral");
+        var $botoes = $("#sidebarButton, #sidebarButton2");
+        var $rodape = $("#rodape");
+        var $rowMain = $("#row-main");
 
-  if ($(window).scrollTop() === 0) {
-    $("#row-main").css("padding-top", "0%");
-    $("#menuLateral").css({ "top": "", "transition": "0.6s" }, "slow");
-    $("#sidebarButton").css({ "top": "", "transition": "0.6s;" });
-    $("#sidebarButton2").css({ "top": "", "transition": "0.6s;" });
-    $("#menuLateral").css("padding-bottom", ($('header').css("height")));
+        // Recalculamos as medidas cruciais (importante pois no resize elas mudam)
+        var headerHeight = $header.outerHeight(); 
+        var scrollTop = $(window).scrollTop();
+        var windowHeight = window.innerHeight;
+        var docHeight = document.body.scrollHeight;
 
-  } else {
-    $("#menuLateral").css({ "top": "0", "transition": "0.6s;" }, "slow");
-    $("#sidebarButton").css({ "top": "0", "transition": "0.6s;" }, "slow");
-    $("#sidebarButton2").css({ "top": "0", "transition": "0.6s;" }, "slow");
-    $("#menuLateral").css("padding-bottom", "0");
-  }
+        // // --- LÓGICA DO RODAPÉ ---
+        // // Verifica se precisa fixar o rodapé se o conteúdo for curto
+        // if (docHeight > windowHeight) {
+        //     $rodape.removeClass("fixaRodape");
+        //     $rowMain.css("padding-bottom", "0");
+        // } else {
+        //     $rodape.addClass("fixaRodape");
+        //     // Usa outerHeight para pegar o valor numérico exato com padding
+        //     $rowMain.css("padding-bottom", $rodape.outerHeight() + "px");
+        // }
+
+        // --- LÓGICA DO MENU ---
+        if (scrollTop >= headerHeight) {
+            // MODO FIXO: Rolou e passou do header
+            var cssFixed = {
+                "position": "fixed",
+                "top": "0",
+                "z-index": "1000",
+                "transition": "none"
+            };
+            $menu.css(cssFixed);
+            $botoes.css(cssFixed);
+        } else {
+            // MODO ABSOLUTO: Header visível
+            // Cola no topo do #row-main (que deve ter position: relative)
+            var cssAbsolute = {
+                "position": "absolute",
+                "top": "0",
+                "z-index": "10",
+                "transition": "none"
+            };
+            $menu.css(cssAbsolute);
+            $botoes.css(cssAbsolute);
+        }
+    }
+
+    // 2. Vinculamos a função aos eventos 'scroll' E 'resize'
+    // O .on() permite ouvir múltiplos eventos de uma vez
+    $(window).on('scroll resize', function() {
+        ajustarLayout();
+    });
+
+    // 3. Chamamos uma vez ao carregar a página para garantir o estado inicial
+    ajustarLayout();
 });
+
+// Garante o posicionamento correto ao carregar a página
+$(document).ready(function(){
+    $(window).trigger('scroll');
+});
+
+// Dispara uma vez ao carregar para o menu não começar errado
+$(document).ready(function(){
+    $(window).trigger('scroll');
+});
+
+// Chame o evento uma vez ao carregar para garantir a posição inicial correta
+$(window).trigger('scroll');
 
 /* Adiciona suavidade na rolagem da ancoragem */
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -82,9 +133,9 @@ $(window).on('resize', function () {
     $("#row-main").css("padding-bottom", ($('#rodape').css("height")));
   }
 
-  if ($(window).scrollTop() > 0) {
-    $("#row-main").css("padding-top", ($('header').css("height")));
-  }
+  // if ($(window).scrollTop() > 0) {
+  //   $("#row-main").css("padding-top", ($('header').css("height")));
+  // }
 
   var win = $(this);
   if (win.width() < 980) {

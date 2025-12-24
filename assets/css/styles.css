@@ -28,7 +28,7 @@ body,
 header,
 footer {
   font-family: "Prelo Book", sans-serif;
-  font-size: 18px !important;
+  font-size: 20px !important;
   letter-spacing: 1px;
 }
 
@@ -166,6 +166,7 @@ footer {
   color: white;
   padding: 8px;
   min-width: 200px;
+    font-size: 16px;
 }
 
 .botaoExtras {
@@ -182,6 +183,7 @@ footer {
 
 #botaoAvancar {
   background-color: #263a60;
+  font-size: 16px;
   color: white;
   width: 260px;
   height: 40px;
@@ -199,6 +201,7 @@ footer {
 #botaoVoltar {
   background-color: white;
   /* border-radius: 25px; */
+    font-size: 16px;
   border: 1px solid #263a60;
   color: #263a60;
   width: 260px;
@@ -282,6 +285,7 @@ footer {
 
 .row #row-main {
   z-index: 1;
+  position: relative;
 }
 
 .col-md-2 {
@@ -948,7 +952,7 @@ footer {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    max-width: 160px;
+    max-width: 166px;
   }
 }
 
@@ -1181,8 +1185,7 @@ nav#menuLateral {
   background-color: #263a60;
   color: white;
   padding-top: 32px;
-  /* padding-left: 32px; */
-  width: 16.667%;
+  width: 250px;
   height: 100vh;
   position: fixed;
   z-index: 2;
@@ -1301,7 +1304,7 @@ a.tituloItem {
   background-color: #263a60;
   border-radius: 0 0 5px 0;
   padding: 0px !important;
-  margin-left: 16.667%;
+  margin-left: 250px;
   cursor: pointer;
   align-items: center;
   justify-content: center;
@@ -1327,7 +1330,7 @@ a.tituloItem {
   background-color: #263a60;
   border-radius: 0 0 5px 0;
   padding: 0% !important;
-  margin-left: 30%;
+  margin-left: 250px;
   cursor: pointer;
   align-items: center;
   justify-content: center;
@@ -1349,7 +1352,7 @@ a.tituloItem {
 /* Recolhe Sidebar */
 @media (max-width: 980px) {
   nav#menuLateral {
-    width: 30% !important;
+    width: 26% !important;
   }
 
   #sidebarButton {
@@ -1365,7 +1368,7 @@ a.tituloItem {
 @media (min-width: 980px) {
   .esconder {
     display: block;
-    margin-left: -16.667%;
+    margin-left: -250px;
   }
 
   #sidebarButton2 {
