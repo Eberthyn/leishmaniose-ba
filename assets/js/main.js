@@ -18,76 +18,76 @@ $(document).ready(function () {
 });
 
 /* Fixa onScroll */
-$(document).ready(function() {
-    
-    // 1. Criamos a função que calcula tudo
-    function ajustarLayout() {
-        var $header = $('header');
-        var $menu = $("#menuLateral");
-        var $botoes = $("#sidebarButton, #sidebarButton2");
-        var $rodape = $("#rodape");
-        var $rowMain = $("#row-main");
+$(document).ready(function () {
 
-        // Recalculamos as medidas cruciais (importante pois no resize elas mudam)
-        var headerHeight = $header.outerHeight(); 
-        var scrollTop = $(window).scrollTop();
-        var windowHeight = window.innerHeight;
-        var docHeight = document.body.scrollHeight;
+  // 1. Criamos a função que calcula tudo
+  function ajustarLayout() {
+    var $header = $('header');
+    var $menu = $("#menuLateral");
+    // var $botoes = $("#sidebarButton, #sidebarButton2");
+    var $rodape = $("#rodape");
+    var $rowMain = $("#row-main");
 
-        // // --- LÓGICA DO RODAPÉ ---
-        // // Verifica se precisa fixar o rodapé se o conteúdo for curto
-        // if (docHeight > windowHeight) {
-        //     $rodape.removeClass("fixaRodape");
-        //     $rowMain.css("padding-bottom", "0");
-        // } else {
-        //     $rodape.addClass("fixaRodape");
-        //     // Usa outerHeight para pegar o valor numérico exato com padding
-        //     $rowMain.css("padding-bottom", $rodape.outerHeight() + "px");
-        // }
+    // Recalculamos as medidas cruciais (importante pois no resize elas mudam)
+    var headerHeight = $header.outerHeight();
+    var scrollTop = $(window).scrollTop();
+    var windowHeight = window.innerHeight;
+    var docHeight = document.body.scrollHeight;
 
-        // --- LÓGICA DO MENU ---
-        if (scrollTop >= headerHeight) {
-            // MODO FIXO: Rolou e passou do header
-            var cssFixed = {
-                "position": "fixed",
-                "top": "0",
-                "z-index": "1000",
-                "transition": "none"
-            };
-            $menu.css(cssFixed);
-            $botoes.css(cssFixed);
-        } else {
-            // MODO ABSOLUTO: Header visível
-            // Cola no topo do #row-main (que deve ter position: relative)
-            var cssAbsolute = {
-                "position": "absolute",
-                "top": "0",
-                "z-index": "10",
-                "transition": "none"
-            };
-            $menu.css(cssAbsolute);
-            $botoes.css(cssAbsolute);
-        }
+    // // --- LÓGICA DO RODAPÉ ---
+    // // Verifica se precisa fixar o rodapé se o conteúdo for curto
+    // if (docHeight > windowHeight) {
+    //     $rodape.removeClass("fixaRodape");
+    //     $rowMain.css("padding-bottom", "0");
+    // } else {
+    //     $rodape.addClass("fixaRodape");
+    //     // Usa outerHeight para pegar o valor numérico exato com padding
+    //     $rowMain.css("padding-bottom", $rodape.outerHeight() + "px");
+    // }
+
+    // --- LÓGICA DO MENU ---
+    if (scrollTop >= headerHeight) {
+      // MODO FIXO: Rolou e passou do header
+      var cssFixed = {
+        "position": "fixed",
+        "top": "0",
+        "z-index": "1000",
+        "transition": "none"
+      };
+      $menu.css(cssFixed);
+      $botoes.css(cssFixed);
+    } else {
+      // MODO ABSOLUTO: Header visível
+      // Cola no topo do #row-main (que deve ter position: relative)
+      var cssAbsolute = {
+        "position": "absolute",
+        "top": "0",
+        "z-index": "10",
+        "transition": "none"
+      };
+      $menu.css(cssAbsolute);
+      $botoes.css(cssAbsolute);
     }
+  }
 
-    // 2. Vinculamos a função aos eventos 'scroll' E 'resize'
-    // O .on() permite ouvir múltiplos eventos de uma vez
-    $(window).on('scroll resize', function() {
-        ajustarLayout();
-    });
-
-    // 3. Chamamos uma vez ao carregar a página para garantir o estado inicial
+  // 2. Vinculamos a função aos eventos 'scroll' E 'resize'
+  // O .on() permite ouvir múltiplos eventos de uma vez
+  $(window).on('scroll resize', function () {
     ajustarLayout();
+  });
+
+  // 3. Chamamos uma vez ao carregar a página para garantir o estado inicial
+  ajustarLayout();
 });
 
 // Garante o posicionamento correto ao carregar a página
-$(document).ready(function(){
-    $(window).trigger('scroll');
+$(document).ready(function () {
+  $(window).trigger('scroll');
 });
 
 // Dispara uma vez ao carregar para o menu não começar errado
-$(document).ready(function(){
-    $(window).trigger('scroll');
+$(document).ready(function () {
+  $(window).trigger('scroll');
 });
 
 // Chame o evento uma vez ao carregar para garantir a posição inicial correta

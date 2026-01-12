@@ -40,12 +40,10 @@ footer {
   align-items: center;
   text-align: left;
   justify-content: space-evenly;
-  background: linear-gradient(
-    to bottom,
-    #730162 40%,
-    #9a0184 60%,
-    #c100a4 100%
-  );
+  background: linear-gradient(to bottom,
+      #730162 40%,
+      #9a0184 60%,
+      #c100a4 100%);
   color: white;
 
   h1 {
@@ -166,7 +164,7 @@ footer {
   color: white;
   padding: 8px;
   min-width: 200px;
-    font-size: 16px;
+  font-size: 16px;
 }
 
 .botaoExtras {
@@ -201,7 +199,7 @@ footer {
 #botaoVoltar {
   background-color: white;
   /* border-radius: 25px; */
-    font-size: 16px;
+  font-size: 16px;
   border: 1px solid #263a60;
   color: #263a60;
   width: 260px;
@@ -576,6 +574,7 @@ small {
 
 /* Smartphone */
 @media (max-width: 480px) {
+
   .blocoTexto,
   .tab-content {
     padding: 30px 30px 10px 30px !important;
@@ -587,6 +586,7 @@ small {
 }
 
 @media (max-width: 780px) {
+
   #botaoAvancar,
   #botaoVoltar {
     margin: 50px 30px 0px 30px;
@@ -684,7 +684,8 @@ ol li::marker {
 }
 
 .icon.mosquito::before {
-  content: ""; /* O conteúdo deve ser vazio, mas a propriedade deve existir */
+  content: "";
+  /* O conteúdo deve ser vazio, mas a propriedade deve existir */
   background-image: url("../images/icones/mosquito.png");
   width: 20px;
   height: 20px;
@@ -695,7 +696,8 @@ ol li::marker {
 }
 
 .icon.cachorro::before {
-  content: ""; /* O conteúdo deve ser vazio, mas a propriedade deve existir */
+  content: "";
+  /* O conteúdo deve ser vazio, mas a propriedade deve existir */
   background-image: url("../images/icones/cachorro.png");
   width: 20px;
   height: 20px;
@@ -706,7 +708,8 @@ ol li::marker {
 }
 
 .icon.apertoDeMao::before {
-  content: ""; /* O conteúdo deve ser vazio, mas a propriedade deve existir */
+  content: "";
+  /* O conteúdo deve ser vazio, mas a propriedade deve existir */
   background-image: url("../images/icones/apertoDeMao.png");
   width: 20px;
   height: 20px;
@@ -717,7 +720,8 @@ ol li::marker {
 }
 
 .icon.estetoscopio::before {
-  content: ""; /* O conteúdo deve ser vazio, mas a propriedade deve existir */
+  content: "";
+  /* O conteúdo deve ser vazio, mas a propriedade deve existir */
   background-image: url("../images/icones/estetoscopio.png");
   width: 20px;
   height: 20px;
@@ -728,7 +732,8 @@ ol li::marker {
 }
 
 .icon.marcador::before {
-  content: ""; /* O conteúdo deve ser vazio, mas a propriedade deve existir */
+  content: "";
+  /* O conteúdo deve ser vazio, mas a propriedade deve existir */
   background-image: url("../images/icones/marcador.png");
   width: 20px;
   height: 20px;
@@ -739,7 +744,8 @@ ol li::marker {
 }
 
 .icon.alerta::before {
-  content: ""; /* O conteúdo deve ser vazio, mas a propriedade deve existir */
+  content: "";
+  /* O conteúdo deve ser vazio, mas a propriedade deve existir */
   background-image: url("../images/icones/alerta.png");
   width: 20px;
   height: 20px;
@@ -750,7 +756,8 @@ ol li::marker {
 }
 
 .icon.gotaSangue::before {
-  content: ""; /* O conteúdo deve ser vazio, mas a propriedade deve existir */
+  content: "";
+  /* O conteúdo deve ser vazio, mas a propriedade deve existir */
   background-image: url("../images/icones/gotaSangue.png");
   width: 20px;
   height: 20px;
@@ -759,8 +766,10 @@ ol li::marker {
   background-position: center;
   margin-right: 15px;
 }
+
 .icon.nariz::before {
-  content: ""; /* O conteúdo deve ser vazio, mas a propriedade deve existir */
+  content: "";
+  /* O conteúdo deve ser vazio, mas a propriedade deve existir */
   background-image: url("../images/icones/nariz.png");
   width: 20px;
   height: 20px;
@@ -771,7 +780,8 @@ ol li::marker {
 }
 
 .icon.red::before {
-  content: ""; /* O conteúdo deve ser vazio, mas a propriedade deve existir */
+  content: "";
+  /* O conteúdo deve ser vazio, mas a propriedade deve existir */
   background-image: url("../images/icones/red.png");
   width: 20px;
   height: 20px;
@@ -782,7 +792,8 @@ ol li::marker {
 }
 
 .icon.grafico::before {
-  content: ""; /* O conteúdo deve ser vazio, mas a propriedade deve existir */
+  content: "";
+  /* O conteúdo deve ser vazio, mas a propriedade deve existir */
   background-image: url("../images/icones/grafico.png");
   width: 20px;
   height: 20px;
@@ -793,7 +804,8 @@ ol li::marker {
 }
 
 .icon.brasil::before {
-  content: ""; /* O conteúdo deve ser vazio, mas a propriedade deve existir */
+  content: "";
+  /* O conteúdo deve ser vazio, mas a propriedade deve existir */
   background-image: url("../images/icones/brasil.png");
   width: 20px;
   height: 20px;
@@ -804,7 +816,8 @@ ol li::marker {
 }
 
 .icon.mundo::before {
-  content: ""; /* O conteúdo deve ser vazio, mas a propriedade deve existir */
+  content: "";
+  /* O conteúdo deve ser vazio, mas a propriedade deve existir */
   background-image: url("../images/icones/mundo.png");
   width: 20px;
   height: 20px;
@@ -815,7 +828,8 @@ ol li::marker {
 }
 
 .icon.pessoas::before {
-  content: ""; /* O conteúdo deve ser vazio, mas a propriedade deve existir */
+  content: "";
+  /* O conteúdo deve ser vazio, mas a propriedade deve existir */
   background-image: url("../images/icones/pessoas.png");
   width: 20px;
   height: 20px;
@@ -826,7 +840,8 @@ ol li::marker {
 }
 
 .icon.celula::before {
-  content: ""; /* O conteúdo deve ser vazio, mas a propriedade deve existir */
+  content: "";
+  /* O conteúdo deve ser vazio, mas a propriedade deve existir */
   background-image: url("../images/icones/celula.png");
   width: 20px;
   height: 20px;
@@ -1302,9 +1317,10 @@ a.tituloItem {
   position: fixed;
   color: white;
   background-color: #263a60;
-  border-radius: 0 0 5px 0;
+  border-radius: 50%;
   padding: 0px !important;
-  margin-left: 250px;
+  right: 8px;
+  top: 8px;
   cursor: pointer;
   align-items: center;
   justify-content: center;
@@ -1328,9 +1344,7 @@ a.tituloItem {
   position: fixed;
   color: white;
   background-color: #263a60;
-  border-radius: 0 0 5px 0;
-  padding: 0% !important;
-  margin-left: 250px;
+  border-radius: 50%;
   cursor: pointer;
   align-items: center;
   justify-content: center;
@@ -1338,6 +1352,8 @@ a.tituloItem {
   height: 35px;
   width: 35px;
   z-index: 2;
+  right: 8px;
+  top: 8px !important;
 }
 
 #sidebarButton2 i {
@@ -1469,6 +1485,7 @@ input[type="radio"]:checked::before {
 input[type="radio"].input-erro:checked::before {
   background-color: #f8062c;
 }
+
 input[type="radio"].input-certo:checked::before {
   background-color: #0abc3a;
 }
@@ -1917,6 +1934,7 @@ input[type="radio"].input-certo:checked::before {
 }
 
 @media (max-width: 600px) {
+
   .module,
   .icons {
     flex-direction: column;
@@ -2115,6 +2133,7 @@ input[type="radio"].input-certo:checked::before {
 }
 
 @media (max-width: 600px) {
+
   .step-circle,
   .arrow-horizontal {
     width: 40px;
