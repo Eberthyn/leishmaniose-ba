@@ -312,6 +312,10 @@ footer {
   padding: 30px;
   background-color: #263a60;
   color: white;
+
+    li.icon.icon.checkmark::before {
+    color: #4B3B8F !important;
+  }
 }
 
 .objetivos {
@@ -529,12 +533,12 @@ p.tituloLista {
 
 .nav-link {
   padding: 0.25rem 0.5rem;
-  color: #c04caf !important;
+  color: #0A665C !important;
 }
 
 .nav-link.active {
-  background-color: #c04caf !important;
-  border-color: #c04caf !important;
+  background-color: #0A665C !important;
+  border-color: #0A665C !important;
   color: white !important;
 }
 
@@ -1524,6 +1528,10 @@ input[type="radio"].input-certo:checked::before {
 .carousel-item {
   .card-content {
     padding: 0;
+  }
+
+  li.icon.arrow::before {
+    color: #984E35 !important;
   }
 }
 
