@@ -20,30 +20,30 @@ $(document).ready(function () {
 /* Fixa onScroll */
 $(document).ready(function () {
 
-  // 1. Criamos a função que calcula tudo
+// 1. Criamos a função que calcula tudo
   function ajustarLayout() {
     var $header = $('header');
     var $menu = $("#menuLateral");
-    // var $botoes = $("#sidebarButton, #sidebarButton2");
     var $rodape = $("#rodape");
     var $rowMain = $("#row-main");
+    var $sidebarCol = $("#sidebar"); // A coluna pai (col-md-2)
 
-    // Recalculamos as medidas cruciais (importante pois no resize elas mudam)
     var headerHeight = $header.outerHeight();
     var scrollTop = $(window).scrollTop();
     var windowHeight = window.innerHeight;
     var docHeight = document.body.scrollHeight;
+    
+    // Pega a largura exata da coluna pai para aplicar no menu quando ele for fixo
+    var sidebarWidth = $sidebarCol.outerWidth();
 
-    // // --- LÓGICA DO RODAPÉ ---
-    // // Verifica se precisa fixar o rodapé se o conteúdo for curto
-    // if (docHeight > windowHeight) {
-    //     $rodape.removeClass("fixaRodape");
-    //     $rowMain.css("padding-bottom", "0");
-    // } else {
-    //     $rodape.addClass("fixaRodape");
-    //     // Usa outerHeight para pegar o valor numérico exato com padding
-    //     $rowMain.css("padding-bottom", $rodape.outerHeight() + "px");
-    // }
+    // --- LÓGICA DO RODAPÉ ---
+    if (docHeight > windowHeight) {
+      $rodape.removeClass("fixaRodape");
+      $rowMain.css("padding-bottom", "0");
+    } else {
+      $rodape.addClass("fixaRodape");
+      $rowMain.css("padding-bottom", $rodape.outerHeight() + "px");
+    }
 
     // --- LÓGICA DO MENU ---
     if (scrollTop >= headerHeight) {
@@ -52,21 +52,22 @@ $(document).ready(function () {
         "position": "fixed",
         "top": "0",
         "z-index": "1000",
-        "transition": "none"
+        "transition": "none",
+        // IMPORTANTE: Força a largura igual à da coluna pai para não esticar na tela toda
+        "width": sidebarWidth + "px" 
       };
-      $menu.css(cssFixed);
-      $botoes.css(cssFixed);
+      $menu.css(cssFixed).addClass('is-fixed');
     } else {
       // MODO ABSOLUTO: Header visível
-      // Cola no topo do #row-main (que deve ter position: relative)
       var cssAbsolute = {
         "position": "absolute",
         "top": "0",
         "z-index": "10",
-        "transition": "none"
+        "transition": "none",
+        // Volta a preencher 100% da coluna pai
+        "width": "100%" 
       };
-      $menu.css(cssAbsolute);
-      $botoes.css(cssAbsolute);
+      $menu.css(cssAbsolute).removeClass('is-fixed');
     }
   }
 
@@ -111,7 +112,7 @@ $(function () {
 // SIDEBAR
 /* Abre com menu recolhido em Tablet e smartphone */
 var tam = $(window).width();
-if (tam <= 980) {
+if (tam <= 1100) {
   $('#sidebar').addClass('esconder');
   $("#sidebarButton").addClass("open");
   $("#content").addClass("col-md-12");
@@ -138,7 +139,7 @@ $(window).on('resize', function () {
   // }
 
   var win = $(this);
-  if (win.width() < 980) {
+  if (win.width() < 1100) {
 
     $('#sidebar').addClass('esconder');
     $("#sidebarButton").addClass("open");
