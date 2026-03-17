@@ -57,7 +57,7 @@ $("input[name=questao1]").on("click", function () {
         "Incorreta. É efetiva, porém com maior toxicidade (nefrotoxicidade, distúrbios eletrolíticos, anemia, arritmias), o que pesa contra em idosos quando existe alternativa mais segura.";
     } else if (value == "D1") {
       mensagem =
-        "Incorreta. Apesar de ser a única via oral, não se mostrou eficaz para Leishmaniose Visceral americana em humanos (embora útil para Leishmaniose Visceral canina e Leishmaniose Tegumentar), portanto não é opção preferencial aqui.";
+        "Incorreta. Apesar de ser a única via oral, não se mostrou eficaz para leishmaniose visceral americana em humanos (embora útil para leishmaniose visceral canina e leishmaniose tegumentar), portanto não é opção preferencial aqui.";
     }
 
     $("#mensagem1").html(mensagem);
