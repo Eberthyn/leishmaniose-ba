@@ -247,6 +247,7 @@ footer {
 
 .tituloAula {
   h3 {
+    font-size: 22px;
     margin-bottom: 0;
     color: #984e35;
   }
@@ -454,7 +455,7 @@ h2 {
 }
 
 h3 {
-  font-size: 18px;
+  font-size: 20px;
   color: #263a60;
   font-weight: bold;
   font-family: "Prelo Bold";
@@ -1799,7 +1800,7 @@ input[type="radio"].input-certo:checked::before {
   /* text-align: justify; */
   margin-bottom: 8px;
   line-height: 1.6;
-  font-size: 0.95rem;
+  font-size: 1.1rem;
 }
 
 .timeline-component .highlight {
